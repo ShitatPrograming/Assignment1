@@ -1,11 +1,15 @@
 #include <stdio.h>
-char ceaser(char);
+/*char caesar(char);
+char decaesar(char);
+char decaesark(char); //with key
+char sub(char);
+char desub(char)*/
 int main(void)
 {
     /*
     int n, key, kyn; //kyn=key, yes or no n=typre of cipher
     char code[];
-    printf("Enter Message:");
+    printf("Enter Message/Code(All caps with _ for space):");
     scanf("%s", &code[]);
     printf("Rotation or Substitution Cipher\n 1= Roation, 2=Substitution:");
     scanf("%d", &n)
@@ -35,14 +39,14 @@ int main(void)
         
    
  
-   char code[5]="JELLO";//pre-encoded message
+   */char code[100]="NICE ONE";//pre-encoded message
    int i ;//index
-   int key=1; //need size of
+   int key=17; //need size of
    /*printf("ENTER MESSAGE:") for later use*/
   /*scanf("") for later use*/
    /*prinf("ENTER KEY:") for later use*/
    /*scanf("%d", &key) for later use*/
-  for(i=0;i<5;i++)
+  for(i=0;i<100;i++)
   {
       if(code[i]>65 && code[i]<90)//if it is a captial letter
       {
@@ -59,7 +63,7 @@ int main(void)
 /*
  * 
  function
- char ceaser(char)
+ char caesar(char)
  {
    for(i=0;i<11;i++)
   {
@@ -71,20 +75,45 @@ int main(void)
    }
  }
  
- char deceaser(char)
+ char decaesar(char)
  {
-     for(key=1;key<27;key++)
-     {
-   for(i=0;i<11;i++)
+     int key,i;
+      for(key=0;key<27;key++)
+   {
+  for(i=0;i<37;i++)
   {
       if(code[i]>65 && code[i]<90)//if it is a captial letter
       {
       
-      code[i]=(code[i]-65-key)%26+65;
+      decoded[i]=(code[i]-key);//%26+65;
+      if(decoded[i]<65)
+      { 
+        decoded[i]=decoded[i]+26;
       }
   }
 
    }
+   char decaesar(char)
+   {
+        int i ;//index
+   int key=17; //need size of
+  for(i=0;i<37;i++)
+  {
+      if(code[i]!=32 && code[i]!=95 && code[i]!=58 && code[i]!=46)//if it is a captial letter
+      {
+      
+      code[i]=(code[i]-key);//%26+65;
+      if(code[i]<65)
+      { 
+        code[i]=code[i]+26;
+      }
+      else if (code[i]>65)
+      {
+          code[i]=code[i];
+      }
+     
+}
+}
  }
 
  *///
