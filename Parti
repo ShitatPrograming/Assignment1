@@ -2,10 +2,43 @@
 char ceaser(char);
 int main(void)
 {
+    /*
+    int n, key, kyn; //kyn=key, yes or no n=typre of cipher
+    char code[];
+    printf("Enter Message:");
+    scanf("%s", &code[]);
+    printf("Rotation or Substitution Cipher\n 1= Roation, 2=Substitution:");
+    scanf("%d", &n)
+    switch(n)
+    {
+        case 1: //rotation
+        printf("Is there a key\n 1=Yes, 2=No:");
+        scanf("%d", &kyn)
+        switch(kyn)
+        {
+            case 1:
+                printf("Key Value:");
+                scanf("%d", &n);
+                FUNCTION
+                printf
+            break;
+            case 2:
+                Function 
+                printf
+            break;
+            defult:
+            printf("Incorrect operation:")
+        }
+        case 2:
+        //sub
+
+        
+   
+ 
    char code[5]="JELLO";//pre-encoded message
    int i ;//index
    int key=1; //need size of
-   /*prinf("ENTER MESSAGE:") for later use*/
+   /*printf("ENTER MESSAGE:") for later use*/
   /*scanf("") for later use*/
    /*prinf("ENTER KEY:") for later use*/
    /*scanf("%d", &key) for later use*/
