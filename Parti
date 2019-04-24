@@ -112,6 +112,98 @@ int main(void)
           code[i]=code[i];
       }
      
+     
+     
+     char decaesar[100]="HELLO";
+    
+    int i;
+    for(i=0;i<100;i++)
+    {
+        switch (decaesar[i])//switch statement assigns new value to letter individually
+        {
+        case 'A':
+        decaesar[i]= 'Q';
+            break;
+        case 'B':
+        decaesar[i]= 'W';
+            break;
+        case 'C':
+        decaesar[i]= 'E';
+            break;
+        case 'D':
+        decaesar[i]= 'R';
+            break;
+        case 'E':
+        decaesar[i]= 'T';
+            break;
+        case 'F':
+        decaesar[i]= 'Y';
+            break;
+        case 'G':
+        decaesar[i]= 'U';
+            break;
+        case 'H':
+        decaesar[i]= 'I';
+            break;
+        case 'I':
+        decaesar[i]= 'O';
+            break;
+        case 'J':
+        decaesar[i]= 'P';
+            break;
+        case 'K':
+        decaesar[i]= 'A';
+            break;
+        case 'L':
+        decaesar[i]= 'S';
+            break;
+        case 'M':
+        decaesar[i]= 'D';
+            break;
+        case 'N':
+        decaesar[i]= 'F';
+            break;
+        case 'O':
+        decaesar[i]= 'G';
+            break;
+        case 'P':
+        decaesar[i]= 'H';
+            break;
+        case 'Q':
+        decaesar[i]= 'J';
+            break;
+        case 'R':
+        decaesar[i]= 'K';
+            break;
+        case 'S':
+        decaesar[i]= 'L';
+            break;
+        case 'T':
+        decaesar[i]= 'Z';
+            break;
+        case 'U':
+        decaesar[i]= 'X';
+            break;
+        case 'V':
+        decaesar[i]= 'C';
+            break;
+        case 'W':
+        decaesar[i]= 'V';
+            break;
+        case 'X':
+        decaesar[i]= 'B';
+            break;
+        case 'Y':
+        decaesar[i]= 'N';
+            break;
+        case 'Z':
+        decaesar[i]= 'M';
+            break;
+     
+      
+        }
+    }
+    printf("%s",decaesar);
 }
 }
  }
