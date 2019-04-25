@@ -7,35 +7,39 @@ char desub(char)*/
 int main(void)
 {
     /*
-    int n, key, kyn; //kyn=key, yes or no n=typre of cipher
+    int n, e, key, kyn; //kyn=key, yes or no n=typre of cipher, e = encript de..
     char code[];
     printf("Enter Message/Code(All caps with _ for space):");
-    scanf("%s", &code[]);
-    printf("Rotation or Substitution Cipher\n 1= Roation, 2=Substitution:");
-    scanf("%d", &n)
-    switch(n)
-    {
-        case 1: //rotation
-        printf("Is there a key\n 1=Yes, 2=No:");
-        scanf("%d", &kyn)
-        switch(kyn)
+    scanf("%d", &e);
+    switch(e)
+   {
+       case 1:
+        printf("Rotation or Substitution Cipher\n 1= Roation, 2=Substitution:");
+        scanf("%d", &n)
+   
+           switch(n)
         {
-            case 1:
-                printf("Key Value:");
-                scanf("%d", &n);
-                FUNCTION
-                printf
-            break;
+            case 1: //rotation
+            printf("Is there a key\n 1=Yes, 2=No:");
+            scanf("%d", &kyn)
+            switch(kyn)
+            {
+                case 1:
+                    printf("Key Value:");
+                    scanf("%d", &n);
+                    FUNCTION
+                    printf
+                break;
+                case 2:
+                    Function 
+                    printf
+                break;
+                defult:
+                printf("Incorrect operation:")
+            }
             case 2:
-                Function 
-                printf
-            break;
-            defult:
-            printf("Incorrect operation:")
-        }
+            //sub
         case 2:
-        //sub
-
         
    
  
@@ -400,3 +404,4 @@ char decaesar[100]="HELLO"; // subs in individual vaules of the sting
     }
     printf("%s",decaesar);
  *///
+
