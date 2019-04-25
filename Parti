@@ -112,100 +112,291 @@ int main(void)
           code[i]=code[i];
       }
      
+}
+}
+ }
+
+char decaesar[100]="HELLO"; // subs in individual vaules of the sting
+
      
-     
-     char decaesar[100]="HELLO";
+
+    int i; 
+
+    for(i=0;i<100;i++) 
+
+    { 
+
+        switch (decaesar[i]) 
+
+        { 
+
+        case 'A': 
+
+        decaesar[i]= 'Q'; 
+
+            break; 
+
+        case 'B': 
+
+        decaesar[i]= 'W'; 
+
+            break; 
+
+        case 'C': 
+
+        decaesar[i]= 'E'; 
+
+            break; 
+
+        case 'D': 
+
+        decaesar[i]= 'R'; 
+
+            break; 
+
+        case 'E': 
+
+        decaesar[i]= 'T'; 
+
+            break; 
+
+        case 'F': 
+
+        decaesar[i]= 'Y'; 
+
+            break; 
+
+        case 'G': 
+
+        decaesar[i]= 'U'; 
+
+            break; 
+
+        case 'H': 
+
+        decaesar[i]= 'I'; 
+
+            break; 
+
+        case 'I': 
+
+        decaesar[i]= 'O'; 
+
+            break; 
+
+        case 'J': 
+
+        decaesar[i]= 'P'; 
+
+            break; 
+
+        case 'K': 
+
+        decaesar[i]= 'A'; 
+
+            break; 
+
+        case 'L': 
+
+        decaesar[i]= 'S'; 
+
+            break; 
+
+        case 'M': 
+
+        decaesar[i]= 'D'; 
+
+            break; 
+
+        case 'N': 
+
+        decaesar[i]= 'F'; 
+
+            break; 
+
+        case 'O': 
+
+        decaesar[i]= 'G'; 
+
+            break; 
+
+        case 'P': 
+
+        decaesar[i]= 'H'; 
+
+            break; 
+
+        case 'Q': 
+
+        decaesar[i]= 'J'; 
+
+            break; 
+
+        case 'R': 
+
+        decaesar[i]= 'K'; 
+
+            break; 
+
+        case 'S': 
+
+        decaesar[i]= 'L'; 
+ 
+            break; 
+
+        case 'T': 
+
+        decaesar[i]= 'Z'; 
+
+            break; 
+
+        case 'U': 
+
+        decaesar[i]= 'X'; 
+
+            break; 
+
+        case 'V': 
+
+        decaesar[i]= 'C'; 
+
+            break; 
+
+        case 'W': 
+
+        decaesar[i]= 'V'; 
+
+            break; 
+
+        case 'X': 
+
+        decaesar[i]= 'B'; 
+
+            break; 
+
+        case 'Y': 
+
+        decaesar[i]= 'N'; 
+
+            break; 
+
+        case 'Z': 
+
+        decaesar[i]= 'M'; 
+
+            break; 
+
+      
+
+       
+
+        } 
+
+    } 
     
+    
+    
+    
+    
+    
+    
+
+    printf("%s",decaesar); 
+    
+    
+    
+    
+    
+    
+    
+    
+    char decaesar[100]="ITSSG";
     int i;
     for(i=0;i<100;i++)
     {
-        switch (decaesar[i])//switch statement assigns new value to letter individually
+        switch (decaesar[i])
         {
-        case 'A':
-        decaesar[i]= 'Q';
-            break;
-        case 'B':
-        decaesar[i]= 'W';
-            break;
-        case 'C':
-        decaesar[i]= 'E';
-            break;
-        case 'D':
-        decaesar[i]= 'R';
-            break;
-        case 'E':
-        decaesar[i]= 'T';
-            break;
-        case 'F':
-        decaesar[i]= 'Y';
-            break;
-        case 'G':
-        decaesar[i]= 'U';
-            break;
-        case 'H':
-        decaesar[i]= 'I';
-            break;
-        case 'I':
-        decaesar[i]= 'O';
-            break;
-        case 'J':
-        decaesar[i]= 'P';
-            break;
-        case 'K':
+        case 'Q':
         decaesar[i]= 'A';
             break;
-        case 'L':
-        decaesar[i]= 'S';
+        case 'W':
+        decaesar[i]= 'B';
             break;
-        case 'M':
-        decaesar[i]= 'D';
-            break;
-        case 'N':
-        decaesar[i]= 'F';
-            break;
-        case 'O':
-        decaesar[i]= 'G';
-            break;
-        case 'P':
-        decaesar[i]= 'H';
-            break;
-        case 'Q':
-        decaesar[i]= 'J';
+        case 'E':
+        decaesar[i]= 'C';
             break;
         case 'R':
+        decaesar[i]= 'D';
+            break;
+        case 'T':
+        decaesar[i]= 'E';
+            break;
+        case 'Y':
+        decaesar[i]= 'F';
+            break;
+        case 'U':
+        decaesar[i]= 'G';
+            break;
+        case 'I':
+        decaesar[i]= 'H';
+            break;
+        case 'O':
+        decaesar[i]= 'I';
+            break;
+        case 'P':
+        decaesar[i]= 'J';
+            break;
+        case 'A':
         decaesar[i]= 'K';
             break;
         case 'S':
         decaesar[i]= 'L';
             break;
-        case 'T':
-        decaesar[i]= 'Z';
+        case 'D':
+        decaesar[i]= 'M';
             break;
-        case 'U':
-        decaesar[i]= 'X';
-            break;
-        case 'V':
-        decaesar[i]= 'C';
-            break;
-        case 'W':
-        decaesar[i]= 'V';
-            break;
-        case 'X':
-        decaesar[i]= 'B';
-            break;
-        case 'Y':
+        case 'F':
         decaesar[i]= 'N';
             break;
+        case 'G':
+        decaesar[i]= 'O';
+            break;
+        case 'H':
+        decaesar[i]= 'P';
+            break;
+        case 'J':
+        decaesar[i]= 'Q';
+            break;
+        case 'K':
+        decaesar[i]= 'R';
+            break;
+        case 'L':
+        decaesar[i]= 'S';
+            break;
         case 'Z':
-        decaesar[i]= 'M';
+        decaesar[i]= 'T';
+            break;
+        case 'X':
+        decaesar[i]= 'U';
+            break;
+        case 'C':
+        decaesar[i]= 'V';
+            break;
+        case 'V':
+        decaesar[i]= 'W';
+            break;
+        case 'B':
+        decaesar[i]= 'X';
+            break;
+        case 'N':
+        decaesar[i]= 'Y';
+            break;
+        case 'M':
+        decaesar[i]= 'Z';
             break;
      
       
         }
     }
     printf("%s",decaesar);
-}
-}
- }
-
  *///
