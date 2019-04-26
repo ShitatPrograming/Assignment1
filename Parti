@@ -1,75 +1,55 @@
 #include <stdio.h>
-/*char caesar(char);
-char decaesar(char);
-char decaesark(char); //with key
-char sub(char);
-char desub(char)*/
+void caesar(char *code, *key);
+void decaesar(char *code);
+void decaesark(char *code, *key); //with key
+void sub(char *decaesar);
+void desub(char *decaesar)*/
 int main(void)
 {
-    /*
-    int n, e, key, kyn; //kyn=key, yes or no n=typre of cipher, e = encript de..
-    char code[];
-    printf("Enter Message/Code(All caps with _ for space):");
-    scanf("%d", &e);
+    
+    int key=2, e=3; //kyn=key, yes or no n=typre of cipher, e = encrypt de..
+    char code[200]= 'HELLO';
+    char decaesar[200]= 'HELLO'
     switch(e)
    {
-       case 1:
-        printf("Rotation or Substitution Cipher\n 1= Roation, 2=Substitution:");
-        scanf("%d", &n)
-   
-           switch(n)
-        {
-            case 1: //rotation
-            printf("Is there a key\n 1=Yes, 2=No:");
-            scanf("%d", &kyn)
-            switch(kyn)
-            {
-                case 1:
-                    printf("Key Value:");
-                    scanf("%d", &n);
-                    FUNCTION
-                    printf
-                break;
-                case 2:
-                    Function 
-                    printf
-                break;
-                defult:
-                printf("Incorrect operation:")
-            }
-            case 2:
-            //sub
+        case 1:
+         
+            caesar(char x);
+            printf("%s", code);
+            break;
+                    
         case 2:
+            sub(char x);
+            printf("%s", decaesar); //idk why i called it decaesar but im to lazy to change it
+            break;
+
+        case 3:
         
-   
- 
-   */char code[100]="NICE ONE";//pre-encoded message
-   int i ;//index
-   int key=17; //need size of
-   /*printf("ENTER MESSAGE:") for later use*/
-  /*scanf("") for later use*/
-   /*prinf("ENTER KEY:") for later use*/
-   /*scanf("%d", &key) for later use*/
-  for(i=0;i<100;i++)
-  {
-      if(code[i]>65 && code[i]<90)//if it is a captial letter
-      {
-      
-      code[i]=(code[i]-65+key)%26+65;
-      }
-  }
-  printf("Encrypted message: %s", code);
+            decaesark(char);
+            printf("%s", code)
+            break;
+        case 4:
+            decaesar(char);
+            printf("%s", decaesar);
+            break;
+                  
+        case 5:
+            desub(char);
+            printf("&s", decaesar);
+            break;
+        default:
+            printf("Incorrect operation:")
+        
+    }
    
   
   return 0;
 
 }
-/*
- * 
- function
- char caesar(char)
+
+ void caesar(char *code, int *key)
  {
-   for(i=0;i<11;i++)
+   for(i=0;i<200;i++)
   {
       if(code[i]>65 && code[i]<90)//if it is a captial letter
       {
@@ -79,12 +59,12 @@ int main(void)
    }
  }
  
- char decaesar(char)
+ char decaesar(char *code, int *key)
  {
      int key,i;
       for(key=0;key<27;key++)
    {
-  for(i=0;i<37;i++)
+  for(i=0;i<200;i++)
   {
       if(code[i]>65 && code[i]<90)//if it is a captial letter
       {
@@ -97,11 +77,11 @@ int main(void)
   }
 
    }
-   char decaesar(char)
+   char decaesark(char code, int key*)
    {
         int i ;//index
-   int key=17; //need size of
-  for(i=0;i<37;i++)
+   int key; //need size of
+  for(i=0;i<200;i++)
   {
       if(code[i]!=32 && code[i]!=95 && code[i]!=58 && code[i]!=46)//if it is a captial letter
       {
@@ -120,13 +100,16 @@ int main(void)
 }
  }
 
-char decaesar[100]="HELLO"; // subs in individual vaules of the sting
+void sub(char *decaesar)
+{
+    // subs in individual vaules of the sting
 
      
 
     int i; 
-
-    for(i=0;i<100;i++) 
+if(code[i]>65 && code[i]<90)
+{
+    for(i=0;i<200;i++) 
 
     { 
 
@@ -292,31 +275,26 @@ char decaesar[100]="HELLO"; // subs in individual vaules of the sting
 
       
 
-       
+   }
+
 
         } 
 
     } 
     
+}
     
     
     
     
     
-    
-
-    printf("%s",decaesar); 
-    
-    
-    
-    
-    
-    
-    
-    
-    char decaesar[100]="ITSSG";
+desub(char *decaesar)
+{
+  
     int i;
-    for(i=0;i<100;i++)
+    if(code[i]>65 && code[i]<90)
+    {
+    for(i=0;i<200;i++)
     {
         switch (decaesar[i])
         {
@@ -399,9 +377,10 @@ char decaesar[100]="HELLO"; // subs in individual vaules of the sting
         decaesar[i]= 'Z';
             break;
      
-      
+  }
+
         }
     }
-    printf("%s",decaesar);
- *///
+}
+ 
 
