@@ -1,44 +1,46 @@
-#include <stdio.h>
-void caesar(char *code, *key);
-void decaesar(char *code);
-void decaesark(char *code, *key); //with key
-void sub(char *decaesar);
-void desub(char *decaesar)*/
-int main(void)
+
+#include<stdio.h>
+void caesar(int key, char *code); //function for encrypting with caesar
+void decaesark(char *code, int key); //function for decrypting caesar with a key
+void decaesar(char *code); //function for decrypting caesar without a key using brute force
+void sub(char *code); //function for encrypting with a sub cipher
+void desub(char *code);
+main(void)
 {
-    
-    int key=2, e=3; //kyn=key, yes or no n=typre of cipher, e = encrypt de..
-    char code[200]= 'HELLO';
-    char decaesar[200]= 'HELLO'
+    int k=7, e=4; /*k=key for rotation cipher when it is known. 
+                    e chooses which function to perform: 
+                    1-coding with caesar and key 
+                    2-coding with sub using qwerty key
+                    3-decoding caesar with known key
+                    4-decoding caesar without key
+                    5-decoding sub from qwerty key
+                    */
+    char code[1000]="HELLO MATE";//Enter code with capitals
+    /*switch statement that calls the different functions and then prints the array*/
     switch(e)
    {
         case 1:
-         
-            caesar(char x);
+            caesar(k, code);
             printf("%s", code);
-            break;
-                    
+            break;       
         case 2:
-            sub(char x);
-            printf("%s", decaesar); //idk why i called it decaesar but im to lazy to change it
+            sub(code);
+            printf("%s", code); 
             break;
 
         case 3:
-        
-            decaesark(char);
-            printf("%s", code)
+            decaesark(code, k);
+            printf("%s", code);
             break;
         case 4:
-            decaesar(char);
-            printf("%s", decaesar);
-            break;
-                  
+            decaesar(code);//print statement inside of function because its in a for loop as it prints 26 seperate messages, choose the one in english that makes sense 
+            break;      
         case 5:
-            desub(char);
-            printf("&s", decaesar);
+            desub(code);
+            printf("%s", code);
             break;
         default:
-            printf("Incorrect operation:")
+        printf("Invalid e value"); //retype valid e value
         
     }
    
@@ -46,47 +48,28 @@ int main(void)
   return 0;
 
 }
-
- void caesar(char *code, int *key)
+void caesar(int key, char *code)
  {
+     int i;
    for(i=0;i<200;i++)
   {
-      if(code[i]>65 && code[i]<90)//if it is a captial letter
+      if(code[i]>=65 && code[i]<=90)//if it is a captial letter it performs the code leaving punctuation and spaces
       {
       
-      code[i]=(code[i]-65+key)%26+65;
+      code[i]=(code[i]-65+key)%26+65; //
       }
    }
  }
  
- char decaesar(char *code, int *key)
- {
-     int key,i;
-      for(key=0;key<27;key++)
-   {
-  for(i=0;i<200;i++)
-  {
-      if(code[i]>65 && code[i]<90)//if it is a captial letter
-      {
-      
-      decoded[i]=(code[i]-key);//%26+65;
-      if(decoded[i]<65)
-      { 
-        decoded[i]=decoded[i]+26;
-      }
-  }
-
-   }
-   char decaesark(char code, int key*)
+  void decaesark(char *code, int key)
    {
         int i ;//index
-   int key; //need size of
-  for(i=0;i<200;i++)
+  for(i=0;i<1000;i++)
   {
-      if(code[i]!=32 && code[i]!=95 && code[i]!=58 && code[i]!=46)//if it is a captial letter
+     if(code[i]>=65 && code[i]<=90)//if it is a captial letter
       {
       
-      code[i]=(code[i]-key);//%26+65;
+      code[i]=(code[i]-(key%26));//%26+65;
       if(code[i]<65)
       { 
         code[i]=code[i]+26;
@@ -99,179 +82,135 @@ int main(void)
 }
 }
  }
+ 
+  void decaesar(char *code)
+ {
+    char decoded[1000]; 
+  int i, key; 
+   for(key=0;key<27;key++) 
+   { 
+      for(i=0;i<1000;i++) 
+        {
+            decoded[i]=code[i];
+          if(decoded[i]>=65 && decoded[i]<=95)//if it is a captial letter 
+            { 
+              decoded[i]=(decoded[i]-key); 
+              if(decoded[i]<65) 
+              {  
+                decoded[i]=decoded[i]+26; 
+              } 
+              else if (decoded[i]>65) 
+              { 
+                  decoded[i]=decoded[i]; 
+              } 
+            } 
 
-void sub(char *decaesar)
+        } 
+
+    printf("\n%d.Decrypted message: %s\n", (key),decoded); 
+
+        
+
+   } 
+ }
+ 
+ void sub(char *code)
 {
     // subs in individual vaules of the sting
 
      
 
-    int i; 
-if(code[i]>65 && code[i]<90)
+    int i=0; 
+if(code[i]>=65 && code[i]<=90)
 {
     for(i=0;i<200;i++) 
 
     { 
 
-        switch (decaesar[i]) 
+        switch (code[i]) 
 
         { 
 
         case 'A': 
-
-        decaesar[i]= 'Q'; 
-
+        code[i]= 'Q'; 
             break; 
-
         case 'B': 
-
-        decaesar[i]= 'W'; 
-
+        code[i]= 'W'; 
             break; 
-
         case 'C': 
-
-        decaesar[i]= 'E'; 
-
+        code[i]= 'E'; 
             break; 
-
         case 'D': 
-
-        decaesar[i]= 'R'; 
-
+        code[i]= 'R'; 
             break; 
-
         case 'E': 
-
-        decaesar[i]= 'T'; 
-
+        code[i]= 'T'; 
             break; 
-
         case 'F': 
-
-        decaesar[i]= 'Y'; 
-
+        code[i]= 'Y'; 
             break; 
-
         case 'G': 
-
-        decaesar[i]= 'U'; 
-
+        code[i]= 'U'; 
             break; 
-
         case 'H': 
-
-        decaesar[i]= 'I'; 
-
+        code[i]= 'I'; 
             break; 
-
         case 'I': 
-
-        decaesar[i]= 'O'; 
-
+        code[i]= 'O'; 
             break; 
-
         case 'J': 
-
-        decaesar[i]= 'P'; 
-
+        code[i]= 'P'; 
             break; 
-
         case 'K': 
-
-        decaesar[i]= 'A'; 
-
+        code[i]= 'A'; 
             break; 
-
         case 'L': 
-
-        decaesar[i]= 'S'; 
-
+        code[i]= 'S'; 
             break; 
-
         case 'M': 
-
-        decaesar[i]= 'D'; 
-
+        code[i]= 'D'; 
             break; 
-
         case 'N': 
-
-        decaesar[i]= 'F'; 
-
+        code[i]= 'F'; 
             break; 
-
         case 'O': 
-
-        decaesar[i]= 'G'; 
-
+        code[i]= 'G'; 
             break; 
-
         case 'P': 
-
-        decaesar[i]= 'H'; 
-
+        code[i]= 'H'; 
             break; 
-
         case 'Q': 
-
-        decaesar[i]= 'J'; 
-
+        code[i]= 'J'; 
             break; 
-
         case 'R': 
-
-        decaesar[i]= 'K'; 
-
+        code[i]= 'K'; 
             break; 
-
         case 'S': 
-
-        decaesar[i]= 'L'; 
- 
+        code[i]= 'L'; 
             break; 
-
         case 'T': 
-
-        decaesar[i]= 'Z'; 
-
+        code[i]= 'Z'; 
             break; 
-
         case 'U': 
-
-        decaesar[i]= 'X'; 
-
+        code[i]= 'X'; 
             break; 
-
         case 'V': 
-
-        decaesar[i]= 'C'; 
-
+        code[i]= 'C'; 
             break; 
-
         case 'W': 
-
-        decaesar[i]= 'V'; 
-
+        code[i]= 'V'; 
             break; 
-
         case 'X': 
-
-        decaesar[i]= 'B'; 
-
+        code[i]= 'B'; 
             break; 
-
         case 'Y': 
-
-        decaesar[i]= 'N'; 
-
+        code[i]= 'N'; 
             break; 
-
         case 'Z': 
-
-        decaesar[i]= 'M'; 
-
-            break; 
+        code[i]= 'M'; 
+            break;
+        default:
+        code[i]=code[i];
 
       
 
@@ -283,104 +222,99 @@ if(code[i]>65 && code[i]<90)
     } 
     
 }
-    
-    
-    
-    
-    
-desub(char *decaesar)
+
+void desub(char *code)
 {
   
-    int i;
-    if(code[i]>65 && code[i]<90)
+    int i=0;
+    if(code[i]>=65 && code[i]<=90)
     {
     for(i=0;i<200;i++)
     {
-        switch (decaesar[i])
+        switch (code[i])
         {
         case 'Q':
-        decaesar[i]= 'A';
+        code[i]= 'A';
             break;
         case 'W':
-        decaesar[i]= 'B';
+        code[i]= 'B';
             break;
         case 'E':
-        decaesar[i]= 'C';
+        code[i]= 'C';
             break;
         case 'R':
-        decaesar[i]= 'D';
+        code[i]= 'D';
             break;
         case 'T':
-        decaesar[i]= 'E';
+        code[i]= 'E';
             break;
         case 'Y':
-        decaesar[i]= 'F';
+        code[i]= 'F';
             break;
         case 'U':
-        decaesar[i]= 'G';
+        code[i]= 'G';
             break;
         case 'I':
-        decaesar[i]= 'H';
+        code[i]= 'H';
             break;
         case 'O':
-        decaesar[i]= 'I';
+        code[i]= 'I';
             break;
         case 'P':
-        decaesar[i]= 'J';
+        code[i]= 'J';
             break;
         case 'A':
-        decaesar[i]= 'K';
+        code[i]= 'K';
             break;
         case 'S':
-        decaesar[i]= 'L';
+        code[i]= 'L';
             break;
         case 'D':
-        decaesar[i]= 'M';
+        code[i]= 'M';
             break;
         case 'F':
-        decaesar[i]= 'N';
+        code[i]= 'N';
             break;
         case 'G':
-        decaesar[i]= 'O';
+        code[i]= 'O';
             break;
         case 'H':
-        decaesar[i]= 'P';
+        code[i]= 'P';
             break;
         case 'J':
-        decaesar[i]= 'Q';
+        code[i]= 'Q';
             break;
         case 'K':
-        decaesar[i]= 'R';
+        code[i]= 'R';
             break;
         case 'L':
-        decaesar[i]= 'S';
+        code[i]= 'S';
             break;
         case 'Z':
-        decaesar[i]= 'T';
+        code[i]= 'T';
             break;
         case 'X':
-        decaesar[i]= 'U';
+        code[i]= 'U';
             break;
         case 'C':
-        decaesar[i]= 'V';
+        code[i]= 'V';
             break;
         case 'V':
-        decaesar[i]= 'W';
+        code[i]= 'W';
             break;
         case 'B':
-        decaesar[i]= 'X';
+        code[i]= 'X';
             break;
         case 'N':
-        decaesar[i]= 'Y';
+        code[i]= 'Y';
             break;
         case 'M':
-        decaesar[i]= 'Z';
+        code[i]= 'Z';
             break;
+            
      
   }
 
         }
     }
 }
- 
-
