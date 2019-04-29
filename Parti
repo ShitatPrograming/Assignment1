@@ -48,30 +48,30 @@ main(void)
   return 0;
 
 }
-/* function caesar uses the code string and int key to rotate through  
+/* function caesar uses the code string and int key to rotate through*/  
 void caesar(int key, char *code)
  {
      int i; //i is counter through string
-   for(i=0;i<200;i++) //goes through enter string adding key
+   for(i=0;i<1000;i++) //goes through enter string adding key
   {
       if(code[i]>=65 && code[i]<=90)//if it is a captial letter it performs the code leaving punctuation and spaces
       {
       
-      code[i]=(code[i]-65+key)%26+65; //
+      code[i]=(code[i]-65+key)%26+65; //adds the rotation key
       }
    }
  }
- 
+ /* function decaesark uses the code string and int key reverse the rotation*/ 
   void decaesark(char *code, int key)
    {
-        int i ;//index
+        int i ; //i is counter through string
   for(i=0;i<1000;i++)
   {
      if(code[i]>=65 && code[i]<=90)//if it is a captial letter
       {
       
       code[i]=(code[i]-(key%26));//%26+65;
-      if(code[i]<65)
+      if(code[i]<65)  //if the new char vaule after the key is minused is less than 65 add 26 so it loops back into the alphabet
       { 
         code[i]=code[i]+26;
       }
@@ -83,12 +83,13 @@ void caesar(int key, char *code)
 }
 }
  }
- 
+ /* function decaesar uses the code string and int key in a for loop
+ increasing by 1 and printing 26 results*/ 
   void decaesar(char *code)
  {
     char decoded[1000]; 
   int i, key; 
-   for(key=0;key<27;key++) 
+   for(key=0;key<27;key++) //changes the key 
    { 
       for(i=0;i<1000;i++) 
         {
@@ -96,25 +97,26 @@ void caesar(int key, char *code)
           if(decoded[i]>=65 && decoded[i]<=95)//if it is a captial letter 
             { 
               decoded[i]=(decoded[i]-key); 
-              if(decoded[i]<65) 
+              if(decoded[i]<65) //if the new char vaule after the key is minused is less than 65 add 26 so it loops back into the alphabet
               {  
                 decoded[i]=decoded[i]+26; 
               } 
               else if (decoded[i]>65) 
               { 
-                  decoded[i]=decoded[i]; 
+                  decoded[i]=decoded[i]; //idk if i need this but i put it in anyway
               } 
             } 
 
         } 
 
-    printf("\n%d.Decrypted message: %s\n", (key),decoded); 
+    printf("\n%d.Decrypted message: %s\n", (key),decoded); //printf inside for loop for the key
 
         
 
    } 
  }
- 
+ /*function sub uses a switch statement inside of a for
+ loop for a qwerty sub encryption*/
  void sub(char *code)
 {
     // subs in individual vaules of the sting
@@ -122,13 +124,13 @@ void caesar(int key, char *code)
      
 
     int i=0; 
-if(code[i]>=65 && code[i]<=90)
+if(code[i]>=65 && code[i]<=90)//cap letter and igonres spaces and punc.
 {
     for(i=0;i<200;i++) 
 
     { 
 
-        switch (code[i]) 
+        switch (code[i]) //switch statement for string
 
         { 
 
@@ -224,15 +226,17 @@ if(code[i]>=65 && code[i]<=90)
     
 }
 
+ /*function desub uses a switch statement inside of a for
+ loop for a qwerty sub decryption*/
 void desub(char *code)
 {
   
     int i=0;
-    if(code[i]>=65 && code[i]<=90)
+    if(code[i]>=65 && code[i]<=90) //cap letter and igonres spaces and punc.
     {
     for(i=0;i<200;i++)
     {
-        switch (code[i])
+        switch (code[i])//switch statement for string
         {
         case 'Q':
         code[i]= 'A';
