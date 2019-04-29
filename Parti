@@ -20,24 +20,24 @@ main(void)
     switch(e)
    {
         case 1:
-            caesar(k, code);
-            printf("%s", code);
+            caesar(k, code); // calls the function with the int k value and char array code
+            printf("%s", code); //prints the string 
             break;       
         case 2:
-            sub(code);
-            printf("%s", code); 
+            sub(code); // calls the function with the char array code
+            printf("%s", code); //prints the string 
             break;
 
         case 3:
-            decaesark(code, k);
-            printf("%s", code);
+            decaesark(code, k); // calls the function with the int k value and char array code
+            printf("%s", code); //prints the string 
             break;
         case 4:
             decaesar(code);//print statement inside of function because its in a for loop as it prints 26 seperate messages, choose the one in english that makes sense 
-            break;      
+            break;          // calls the function with the char array code
         case 5:
-            desub(code);
-            printf("%s", code);
+            desub(code); // calls the function with the char array code
+            printf("%s", code); //prints the string 
             break;
         default:
         printf("Invalid e value"); //retype valid e value
@@ -48,10 +48,11 @@ main(void)
   return 0;
 
 }
+/* function caesar uses the code string and int key to rotate through  
 void caesar(int key, char *code)
  {
-     int i;
-   for(i=0;i<200;i++)
+     int i; //i is counter through string
+   for(i=0;i<200;i++) //goes through enter string adding key
   {
       if(code[i]>=65 && code[i]<=90)//if it is a captial letter it performs the code leaving punctuation and spaces
       {
